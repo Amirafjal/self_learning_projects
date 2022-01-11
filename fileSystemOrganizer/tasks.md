@@ -1,5 +1,5 @@
 # Todo
-[] Help
+[*] Help
 [] Organize
 [] Tree
 [] Global
