@@ -13,6 +13,7 @@ let types = {
     documents: ['docx', 'doc', 'pdf', 'xlsx', 'xls', 'odt', 'ods', 'odp', 'odg', 'odf', 'txt', 'ps', 'tex'],
     app: ['exe', 'dmg', 'pkg', 'deb']
 }
+
 switch (command) {
     case "tree":
         treeFn(inputArr[1]);
@@ -31,7 +32,6 @@ switch (command) {
 function treeFn(dirPath) {
     console.log("Tree command implemented for ", dirPath);
 }
-
 
 function organizeFn(dirPath) {
     // console.log("Organize command implemented for ", dirPath);
@@ -56,6 +56,7 @@ function organizeFn(dirPath) {
     }
     organizeHelper(dirPath, destPath);
 }
+
 function organizeHelper(src, dest) {
     // 3.Identify category of all the files present in that input directory ->
     let childName = fs.readdirSync(src);
@@ -74,6 +75,7 @@ function organizeHelper(src, dest) {
     }
 
 }
+
 function sendFiles(srcFilePath, dest, category) {
     let categoryPath = path.join(dest, category);
     if (fs.existsSync(categoryPath) == false) {
@@ -85,9 +87,6 @@ function sendFiles(srcFilePath, dest, category) {
     fs.unlinkSync(srcFilePath);
     console.log(fileName, "copied to ", category);
 }
-
-
-
 
 function getCategory(name) {
     let ext = path.extname(name)
@@ -103,11 +102,6 @@ function getCategory(name) {
     return "others";
 }
 
-
-
-
-
-
 function helpFn(dirPath) {
     console.log(`
     List of all the commands:
@@ -116,6 +110,7 @@ function helpFn(dirPath) {
                 node main.js help
                 `);
 }
+
 
 
 
