@@ -1,3 +1,6 @@
+let fs = require('fs');
+let path = require('path');
+
 function organizeFn(dirPath) {
     // console.log("Organize command implemented for ", dirPath);
     // 1.input -> directory path given
