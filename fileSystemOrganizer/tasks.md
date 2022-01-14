@@ -1,6 +1,6 @@
 # Todo
 [*] Help
-[] Organize
-[] Tree
+[*] Organize
+[*] Tree
 [] Global
 [] Cover some good practice
